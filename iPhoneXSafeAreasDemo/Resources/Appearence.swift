@@ -11,18 +11,28 @@ import UIKit
 struct Appearence {
     static func setAppAppearence() {
         
-        // Navigation bar
-        UINavigationBar.appearance().barStyle = .black
-        UINavigationBar.appearance().barTintColor = UIColor.STRV.red
-        UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        /// Navigation bar
         
-        // Tab bar
+        // background
+        UINavigationBar.appearance().barTintColor = UIColor.STRV.red
+        UINavigationBar.appearance().isTranslucent = false
+        
+        // bottom shadow
+        UINavigationBar.appearance().shadowImage = UIImage()
+        
+        // button tint
+        UINavigationBar.appearance().tintColor = .white
+        // text color
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        
+        /// Status Bar - deprecated method, but easier for the purpose of this app
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        /// Tab bar
         UITabBar.appearance().tintColor = UIColor.STRV.red
         
-        // Tool bar
+        /// Tool bar
         UIToolbar.appearance().tintColor = UIColor.STRV.red
         
     }
