@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="86" id="KGk-i7-Jjw" customClass="ItemTableViewCell" customModule="iPhoneXSafeAreasDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="542" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="542" height="85.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwq-8R-EnV">
+                        <rect key="frame" x="8" y="8.5" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="c7Q-mP-isq"/>
+                            <constraint firstAttribute="width" secondItem="Hwq-8R-EnV" secondAttribute="height" multiplier="1:1" id="xjz-XH-7Mw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxB-4j-Roa">
+                        <rect key="frame" x="85.5" y="8.5" width="448.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rb2-ho-00F">
+                        <rect key="frame" x="85.5" y="34.5" width="448.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krH-JL-Lgb">
+                        <rect key="frame" x="86" y="57.5" width="448" height="18"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Rb2-ho-00F" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Bzi-CP-WfH"/>
+                    <constraint firstItem="Rb2-ho-00F" firstAttribute="top" secondItem="hxB-4j-Roa" secondAttribute="bottom" constant="5" id="DLO-wa-XGC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="krH-JL-Lgb" secondAttribute="trailing" id="DXB-8a-5lL"/>
+                    <constraint firstItem="hxB-4j-Roa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="FoW-cB-cPd"/>
+                    <constraint firstItem="Hwq-8R-EnV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="HA7-ZS-siu"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Hwq-8R-EnV" secondAttribute="bottom" id="VVy-Dk-q4F"/>
+                    <constraint firstItem="Rb2-ho-00F" firstAttribute="leading" secondItem="Hwq-8R-EnV" secondAttribute="trailing" constant="8" id="XsS-VX-sag"/>
+                    <constraint firstItem="krH-JL-Lgb" firstAttribute="top" secondItem="Rb2-ho-00F" secondAttribute="bottom" constant="5" id="gS6-gX-d8f"/>
+                    <constraint firstItem="krH-JL-Lgb" firstAttribute="leading" secondItem="Hwq-8R-EnV" secondAttribute="trailing" constant="8" id="oxf-Fl-ETe"/>
+                    <constraint firstItem="Hwq-8R-EnV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qFm-Yc-JLE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="krH-JL-Lgb" secondAttribute="bottom" id="tv6-2d-Ana"/>
+                    <constraint firstItem="hxB-4j-Roa" firstAttribute="leading" secondItem="Hwq-8R-EnV" secondAttribute="trailing" constant="8" id="viM-nc-bkb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hxB-4j-Roa" secondAttribute="trailing" id="zRf-EY-adN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionCell" destination="krH-JL-Lgb" id="jSf-H6-ryr"/>
+                <outlet property="itemImageView" destination="Hwq-8R-EnV" id="RlR-5T-JEM"/>
+                <outlet property="subtitleLabel" destination="Rb2-ho-00F" id="Rqd-R5-fDo"/>
+                <outlet property="titleLabel" destination="hxB-4j-Roa" id="J7b-VN-aaT"/>
+            </connections>
+            <point key="canvasLocation" x="145" y="75"/>
+        </tableViewCell>
+    </objects>
+</document>
