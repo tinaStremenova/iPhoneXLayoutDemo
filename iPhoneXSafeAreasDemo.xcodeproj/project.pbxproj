@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A5B891459D9003D6150A2A1 /* Pods_iPhoneXSafeAreasDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238438B6F49134782C9A18A2 /* Pods_iPhoneXSafeAreasDemo.framework */; };
 		11F9C671831EEDE445663261 /* Pods_iPhoneXSafeAreasDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D000F71FB51CC044F12C07 /* Pods_iPhoneXSafeAreasDemoUITests.framework */; };
+		9D03BD571F83CE7800924AE5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D03BD561F83CE7800924AE5 /* R.generated.swift */; };
 		9D2F22061F7A685B00E19468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F22051F7A685B00E19468 /* Assets.xcassets */; };
 		9D2F22141F7A685B00E19468 /* iPhoneXSafeAreasDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F22131F7A685B00E19468 /* iPhoneXSafeAreasDemoUITests.swift */; };
 		9DCC02901F83C9CB0067A567 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC028E1F83C9CB0067A567 /* DataManager.swift */; };
@@ -24,7 +25,6 @@
 		9DCC02A61F83CB810067A567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC02A41F83CB810067A567 /* AppDelegate.swift */; };
 		9DCC02A71F83CB810067A567 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC02A51F83CB810067A567 /* Info.plist */; };
 		9DCC02AA1F83CBC30067A567 /* Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC02A81F83CBC30067A567 /* Appearence.swift */; };
-		9DCC02AB1F83CBC30067A567 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC02A91F83CBC30067A567 /* R.generated.swift */; };
 		9DCC02B01F83CBEF0067A567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC02AC1F83CBEF0067A567 /* LaunchScreen.storyboard */; };
 		9DCC02B11F83CBEF0067A567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC02AE1F83CBEF0067A567 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -44,6 +44,7 @@
 		238438B6F49134782C9A18A2 /* Pods_iPhoneXSafeAreasDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPhoneXSafeAreasDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2FAEC10EA46947F1D40249 /* Pods-iPhoneXSafeAreasDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPhoneXSafeAreasDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPhoneXSafeAreasDemoUITests/Pods-iPhoneXSafeAreasDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		76D000F71FB51CC044F12C07 /* Pods_iPhoneXSafeAreasDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPhoneXSafeAreasDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D03BD561F83CE7800924AE5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Resources/R.generated.swift; sourceTree = "<group>"; };
 		9D2F21FB1F7A685B00E19468 /* iPhoneXSafeAreasDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneXSafeAreasDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2F22051F7A685B00E19468 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D2F220F1F7A685B00E19468 /* iPhoneXSafeAreasDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhoneXSafeAreasDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +63,6 @@
 		9DCC02A41F83CB810067A567 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SupportingFiles/AppDelegate.swift; sourceTree = "<group>"; };
 		9DCC02A51F83CB810067A567 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
 		9DCC02A81F83CBC30067A567 /* Appearence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Appearence.swift; path = Resources/Appearence.swift; sourceTree = "<group>"; };
-		9DCC02A91F83CBC30067A567 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Resources/R.generated.swift; sourceTree = "<group>"; };
 		9DCC02AD1F83CBEF0067A567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DCC02AF1F83CBEF0067A567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF04DC3DCC245EA6D45B537 /* Pods-iPhoneXSafeAreasDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPhoneXSafeAreasDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPhoneXSafeAreasDemoUITests/Pods-iPhoneXSafeAreasDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,10 +189,10 @@
 		9DDC9FFB1F7AA0960069CBA1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9D03BD561F83CE7800924AE5 /* R.generated.swift */,
 				9DCC02AC1F83CBEF0067A567 /* LaunchScreen.storyboard */,
 				9DCC02AE1F83CBEF0067A567 /* Main.storyboard */,
 				9DCC02A81F83CBC30067A567 /* Appearence.swift */,
-				9DCC02A91F83CBC30067A567 /* R.generated.swift */,
 				9D2F22051F7A685B00E19468 /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -226,7 +226,7 @@
 			buildConfigurationList = 9D2F22181F7A685B00E19468 /* Build configuration list for PBXNativeTarget "iPhoneXSafeAreasDemo" */;
 			buildPhases = (
 				DF480BBF9C3E21F9C327EB87 /* [CP] Check Pods Manifest.lock */,
-				9DAC20681F7B956A00749C16 /* ShellScript */,
+				9DAC20681F7B956A00749C16 /* R Swift */,
 				9D2F21F71F7A685B00E19468 /* Sources */,
 				9D2F21F81F7A685B00E19468 /* Frameworks */,
 				9D2F21F91F7A685B00E19468 /* Resources */,
@@ -361,18 +361,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iPhoneXSafeAreasDemoUITests/Pods-iPhoneXSafeAreasDemoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9DAC20681F7B956A00749C16 /* ShellScript */ = {
+		9DAC20681F7B956A00749C16 /* R Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "R Swift";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/iPhoneXSafeAreasDemo\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/iPhoneXSafeAreasDemo/Resources\"";
 		};
 		BE23699F5921404CEA69A651 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -447,7 +448,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DCC02AB1F83CBC30067A567 /* R.generated.swift in Sources */,
 				9DCC02911F83C9CB0067A567 /* Item.swift in Sources */,
 				9DCC02981F83CA100067A567 /* ItemTableViewCell.swift in Sources */,
 				9DCC029D1F83CA6D0067A567 /* EntriesListVC.swift in Sources */,
@@ -459,6 +459,7 @@
 				9DCC02901F83C9CB0067A567 /* DataManager.swift in Sources */,
 				9DCC02971F83CA100067A567 /* EntrySectionHeaderView.swift in Sources */,
 				9DCC02AA1F83CBC30067A567 /* Appearence.swift in Sources */,
+				9D03BD571F83CE7800924AE5 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
