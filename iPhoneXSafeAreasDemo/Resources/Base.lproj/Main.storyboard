@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TSb-0X-aW9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TSb-0X-aW9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ItemListVC" customModule="iPhoneXSafeAreasDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,11 +26,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="k5w-6u-woJ" secondAttribute="trailing" id="Cum-OO-KZx"/>
-                            <constraint firstItem="k5w-6u-woJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oui-7S-3Ma"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k5w-6u-woJ" secondAttribute="bottom" id="fL0-yf-xVf"/>
+                            <constraint firstItem="p78-5H-eGJ" firstAttribute="trailing" secondItem="k5w-6u-woJ" secondAttribute="trailing" id="Cum-OO-KZx"/>
+                            <constraint firstItem="k5w-6u-woJ" firstAttribute="leading" secondItem="p78-5H-eGJ" secondAttribute="leading" id="Oui-7S-3Ma"/>
+                            <constraint firstItem="p78-5H-eGJ" firstAttribute="bottom" secondItem="k5w-6u-woJ" secondAttribute="bottom" id="fL0-yf-xVf"/>
                             <constraint firstItem="k5w-6u-woJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wVh-bn-Ahh"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="p78-5H-eGJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="dXJ-iB-Z7a"/>
                     <connections>
@@ -48,16 +46,12 @@
         <scene sceneID="EvI-V0-0sE">
             <objects>
                 <viewController storyboardIdentifier="ItemDetailVC" id="y12-1D-eX8" customClass="ItemDetailVC" customModule="iPhoneXSafeAreasDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K3J-Wk-kSW"/>
-                        <viewControllerLayoutGuide type="bottom" id="OdG-SI-Gf2"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zP6-g5-uB6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEy-Rn-Qpu">
-                                <rect key="frame" x="16" y="20" width="343" height="603"/>
+                                <rect key="frame" x="16" y="40" width="343" height="583"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kjK-e5-peB">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="516"/>
@@ -107,14 +101,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xzD-S5-0kD" secondAttribute="bottom" id="2NK-m4-azU"/>
                             <constraint firstItem="mEy-Rn-Qpu" firstAttribute="top" secondItem="zP6-g5-uB6" secondAttribute="topMargin" constant="20" id="4fD-qI-bsU"/>
+                            <constraint firstItem="xzD-S5-0kD" firstAttribute="bottom" secondItem="zGe-CP-kIL" secondAttribute="bottom" id="7R3-Ou-roI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mEy-Rn-Qpu" secondAttribute="trailing" id="QkT-gE-ZRl"/>
                             <constraint firstItem="mEy-Rn-Qpu" firstAttribute="leading" secondItem="zP6-g5-uB6" secondAttribute="leadingMargin" id="SRh-Ft-8n6"/>
-                            <constraint firstItem="xzD-S5-0kD" firstAttribute="leading" secondItem="zP6-g5-uB6" secondAttribute="leading" id="TKs-HD-wcH"/>
+                            <constraint firstItem="xzD-S5-0kD" firstAttribute="leading" secondItem="zGe-CP-kIL" secondAttribute="leading" id="TKs-HD-wcH"/>
                             <constraint firstItem="xzD-S5-0kD" firstAttribute="top" secondItem="mEy-Rn-Qpu" secondAttribute="bottom" id="oNv-ts-ws0"/>
-                            <constraint firstAttribute="trailing" secondItem="xzD-S5-0kD" secondAttribute="trailing" id="uAd-Ak-TaH"/>
+                            <constraint firstItem="zGe-CP-kIL" firstAttribute="trailing" secondItem="xzD-S5-0kD" secondAttribute="trailing" id="uAd-Ak-TaH"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="zGe-CP-kIL"/>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="Lhs-XJ-lvx" id="EMW-o8-7zf"/>
@@ -152,7 +147,7 @@
                     <tabBarItem key="tabBarItem" title="Employees" image="icon-employee" id="W8G-QP-r2U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sXI-JA-bo7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -191,7 +186,7 @@
                     <tabBarItem key="tabBarItem" title="Entries" image="icon-door" id="9JR-4s-LvY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BTO-ew-oVn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
