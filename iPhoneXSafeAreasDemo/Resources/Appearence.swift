@@ -15,15 +15,18 @@ struct Appearence {
         
         // background
         UINavigationBar.appearance().barTintColor = UIColor.STRV.red
-        UINavigationBar.appearance().isTranslucent = false
-        
-        // bottom shadow
-        UINavigationBar.appearance().shadowImage = UIImage()
-        
+
+
         // button tint
         UINavigationBar.appearance().tintColor = .white
         // text color
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        if #available(iOS 11.0, *) {
+            UINavigationBar.appearance().largeTitleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        } else {
+            UINavigationBar.appearance().shadowImage = UIImage()
+            UINavigationBar.appearance().isTranslucent = false
+        }
         
         
         /// Status Bar - deprecated method, but easier for the purpose of this app

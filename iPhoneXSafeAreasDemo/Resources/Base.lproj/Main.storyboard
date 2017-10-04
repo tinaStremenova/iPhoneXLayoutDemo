@@ -173,7 +173,7 @@
                             <outlet property="delegate" destination="AC6-3B-fr5" id="bPo-ll-A7X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Office Entries" id="t6Z-nM-ZqH"/>
+                    <navigationItem key="navigationItem" title="Office Entries" largeTitleDisplayMode="never" id="t6Z-nM-ZqH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfQ-2b-vkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

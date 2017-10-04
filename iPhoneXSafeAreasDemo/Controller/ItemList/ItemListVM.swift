@@ -21,15 +21,8 @@ struct ItemListVM {
         return formatter
     }()
     
-    var title:String {
-        return "Employees"
-    }
-    
     var tabbarItemTitle:String {
         return "Employees"
     }
     
-    var tabBarItemIconName:String {
-        return "tabbar-icon-cat"
-    }
 }

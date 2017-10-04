@@ -32,7 +32,7 @@ class ItemListVC: UIViewController {
         self.tableView.delegate = self
         
         // Navigation Bar - - - - -
-        self.navigationItem.title = self.viewModel.title
+        self.navigationItem.title = self.viewModel.tabbarItemTitle
         
         // Search controller - - - - -
         searchController.searchResultsUpdater = self
@@ -41,6 +41,8 @@ class ItemListVC: UIViewController {
         
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = searchController
+            self.navigationItem.largeTitleDisplayMode = .always
+            navigationController?.navigationBar.prefersLargeTitles = true
         } else {
             definesPresentationContext = true
             

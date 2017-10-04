@@ -15,6 +15,10 @@ class EntriesListVC:UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if #available(iOS 11.0, *) {
+            self.navigationItem.largeTitleDisplayMode = .never
+        }
+        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "EntryCell")
         self.tableView.register(EntrySectionHeaderView.self, forHeaderFooterViewReuseIdentifier: "HeaderView")
         

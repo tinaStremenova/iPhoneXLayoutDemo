@@ -23,5 +23,10 @@ class ItemDetailVC: UIViewController {
         self.imageView.image = UIImage(named: item.itemPictureName)
         self.nameLabel.text = item.itemName
         self.descriptionLabel.text = item.itemDescription
+        
+        
+        if #available(iOS 11.0, *) {
+            self.navigationItem.largeTitleDisplayMode = .never
+        }
     }
 }
