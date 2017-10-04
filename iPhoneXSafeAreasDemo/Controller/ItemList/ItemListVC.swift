@@ -21,7 +21,6 @@ class ItemListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // TableView - - - - -
         let nib = UINib(nibName: "ItemTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: cellReuseIdentifier)
@@ -38,14 +37,19 @@ class ItemListVC: UIViewController {
         // Search controller - - - - -
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-
-        // Search controller Layout - - - - -
-        searchController.searchBar.barTintColor = UIColor.STRV.red
         searchController.searchBar.tintColor = UIColor.white
-        searchController.searchBar.isTranslucent = false
-        searchController.searchBar.backgroundImage = UIImage()
+        
+        if #available(iOS 11.0, *) {
+            self.navigationItem.searchController = searchController
+        } else {
+            definesPresentationContext = true
+            
+            searchController.searchBar.barTintColor = UIColor.STRV.red
+            searchController.searchBar.backgroundImage = UIImage()
+            searchController.searchBar.isTranslucent = false
+            
+            tableView.tableHeaderView = searchController.searchBar
+        }
     }
     
     var itemCount:Int {
