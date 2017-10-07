@@ -41,15 +41,19 @@ class ItemListVC: UIViewController {
         
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = searchController
-            self.navigationItem.largeTitleDisplayMode = .always
+            
+            // 'Activates' large titles in navigation controller
             navigationController?.navigationBar.prefersLargeTitles = true
+            
+            // Sets if this viewcontroller will display large titles in navigation controller that uses them            
+            // Can be also set in storyboard for every view controller
+            self.navigationItem.largeTitleDisplayMode = .always
+
         } else {
             definesPresentationContext = true
-            
             searchController.searchBar.barTintColor = UIColor.STRV.red
             searchController.searchBar.backgroundImage = UIImage()
             searchController.searchBar.isTranslucent = false
-            
             tableView.tableHeaderView = searchController.searchBar
         }
     }
@@ -147,7 +151,6 @@ extension ItemListVC {
         guard let searchString = searchString else { return self.searchedItems = [] }
         self.searchedItems = self.viewModel.items.filter({ $0.itemName.contains(searchString) || $0.itemDescription.contains(searchString)})
     }
-    
 }
 
 extension ItemListVC: UISearchResultsUpdating {
