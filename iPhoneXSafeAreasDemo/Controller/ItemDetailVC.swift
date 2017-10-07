@@ -29,8 +29,18 @@ class ItemDetailVC: UIViewController {
             self.navigationItem.largeTitleDisplayMode = .never
         }
         
-        // test insets behaviour
+        // Test insets behaviour
         self.setInsets()
+        
+        // Updates home indicator hidden value when needed, so this value can be decided even after viewcontroller was displayed
+        if #available(iOS 11.0, *) {
+            self.setNeedsUpdateOfHomeIndicatorAutoHidden()
+        }
+    }
+    
+    /* Hides home button indicator. When user starts interacting with UI it shows up again. */
+    override func prefersHomeIndicatorAutoHidden() -> Bool {
+        return true
     }
     
     private func setInsets() {
