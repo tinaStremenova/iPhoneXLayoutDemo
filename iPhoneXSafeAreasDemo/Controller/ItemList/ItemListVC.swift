@@ -62,7 +62,6 @@ class ItemListVC: UIViewController {
         return isSearching ? self.searchedItems[indexPath.row] :
             self.viewModel.items[indexPath.row]
     }
-    
 }
 
 
@@ -94,10 +93,41 @@ extension ItemListVC:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = self.item(for: indexPath)
+        self.showStoryboardDetail(item: item)
+    }
+    
+    /// Shows detail VC with layout created in storyboard
+    private func presentStoryboardDetail(item: Item) {
         let detailVC = R.storyboard.main().instantiateViewController(withIdentifier: "ItemDetailVC") as! ItemDetailVC
         detailVC.item = item
         detailVC.hidesBottomBarWhenPushed = true
+        self.present(detailVC, animated: true, completion: nil)
+    }
+    
+    /// Shows detail VC with layout created in storyboard
+    private func showStoryboardDetail(item: Item) {
+        let detailVC = R.storyboard.main().instantiateViewController(withIdentifier: "ItemDetailVC") as! ItemDetailVC
+        detailVC.item = item
+        detailVC.hidesBottomBarWhenPushed = true
+        self.show(detailVC, sender: self)
+    }
+    
+    /// Shows detail VC with layout created in code
+    /// Demonstrates how views behave when constrained to different guides with navigation controller & tab bar
+    /// Debug view hierarchy to see which views went under the bars
+    private func showCodeGeneratedLayoutDetail(item: Item) {
+        
+        // choose the configuration you want to test
+        let detailVC = TestVC(with: item, configuration: .scrollViewContrainedToView)
         self.navigationController?.show(detailVC, sender: self)
+    }
+    
+    /// Presents detail VC with layout created in code
+    /// Demonstrates how views behave when constrained to different guides
+    private func presentCodeGeneratedLayoutDetail(item: Item) {
+        let detailVC = TestVC(with: item, configuration: .scorllViewConstrainedToLayoutMargins)
+        detailVC.hidesBottomBarWhenPushed = true
+        self.present(detailVC, animated: true, completion: nil)
     }
 }
 
