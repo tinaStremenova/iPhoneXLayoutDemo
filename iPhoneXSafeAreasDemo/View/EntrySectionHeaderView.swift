@@ -14,7 +14,16 @@ class EntrySectionHeaderView:UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        self.contentView.backgroundColor = UIColor.white
+        // self.contentView.backgroundColor = UIColor.cyan
+        
+        
+        /* For iPhone X you should set the color for background view, not the content view.
+           However background view is at this point of initialization nonexistent - therefore it makes sense to set this property in UITableviewController/UIViewController
+           in tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+           instead of initializing background view here by yourself. */
+        
+        // self.backgroundView = UIView()
+        // self.backgroundView?.backgroundColor = UIColor.yellow
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,7 +46,7 @@ extension EntrySectionHeaderView {
         label.leadingAnchor.constraint(equalTo: guides.leadingAnchor).isActive = true
         label.trailingAnchor.constraint(equalTo: guides.trailingAnchor).isActive = true
         label.bottomAnchor.constraint(equalTo: guides.bottomAnchor).isActive = true
-
+        
         return label
     }
 }

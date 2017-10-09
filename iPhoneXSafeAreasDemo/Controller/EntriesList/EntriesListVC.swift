@@ -26,6 +26,20 @@ class EntriesListVC:UITableViewController {
         self.tableView.estimatedRowHeight = 70
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let headerView = view as? EntrySectionHeaderView else { return }
+        
+        /* This line will cover whole cell area from edge to edge.
+           See the difference between setting the color to background view and content view on landscape. */
+        headerView.backgroundView?.backgroundColor = .yellow
+
+        // This line will cover cell area inset by safe areas
+        headerView.contentView.backgroundColor = .cyan
+        
+        // This will not set any background color
+        headerView.backgroundColor = .magenta
+    }
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! EntrySectionHeaderView
         view.titleLabel.text = self.viewModel.title(forSection: section)
